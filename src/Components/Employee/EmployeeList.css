@@ -1,0 +1,16 @@
+.hover-card{
+    transition: transform 0.1s ease;
+}
+.hover-card:hover{
+ 
+    background-color:  rgb(246, 253, 255);
+    transform: scale(1.01);
+}
+
+.card-media{
+width: 90%;
+height: 110px;
+border-radius: 15px ;
+
+
+}
