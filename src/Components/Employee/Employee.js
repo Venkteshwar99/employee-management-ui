@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, CardContent, Typography, Grid, CardMedia } from '@mui/material';
+import { Card, CardContent, Typography, Grid, CardMedia, Link } from '@mui/material';
 import '../Employee/EmployeeList.css'; // Import the CSS file
 import axios from 'axios';
 const Employee = () => {
@@ -16,13 +16,16 @@ const Employee = () => {
     <Card className="hover-card">
     <Grid container>
     <Grid item xs={8} sm={8} md={8} lg={8}>
-    <CardContent>
+        <CardContent>
+        <Link href={`/employee/${employee.empId}`}>
     <Typography variant="h6" component="div">
-                       {employee.fullName}
+                           {employee.fullName}          
     </Typography>
-    <Typography color="textSecondary">
+    </Link>
+       <Typography color="textSecondary">
                        Email: {employee.email}
     </Typography>
+   
        {/* <Typography color="textSecondary">
                        Department: {employee.empDept}
     </Typography>
