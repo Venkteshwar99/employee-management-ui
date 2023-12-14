@@ -3,8 +3,9 @@ import './App.css';
 //import EmployeeDetails from '../src/Components/Employee/EmployeeDetails.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SearchBar from './Components/Employee/SearchBar.js';
-import Navbar from './Components/Employee/Navbar.js';
 import Employee from './Components/Employee/Employee.js';
+import EmployeeDetailsPage from './Components/Employee/EmployeeDetailsPage.js';
+import SearchResults from './Components/Employee/SearchResults.js';
 
 // function App() {
 //   return (
@@ -19,9 +20,10 @@ import Employee from './Components/Employee/Employee.js';
 const App = () => {
   return (
  <Router>
- <Navbar />
+
  <Switch>
  <Route exact path="/" component={SearchBar} />
+  <Route path="/api/getActiveEmp/:employeeId" component={EmployeeDetailsPage} />
  <Route path="/employee-list" component={Employee} />
         {/* Add other routes as needed */}
  </Switch>

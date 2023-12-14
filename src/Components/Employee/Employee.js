@@ -17,7 +17,7 @@ const Employee = () => {
     <Grid container>
     <Grid item xs={8} sm={8} md={8} lg={8}>
         <CardContent>
-        <Link href={`/employee/${employee.empId}`}>
+        <Link href={`/api/getActiveEmp/${employee.empId}`}>
     <Typography variant="h6" component="div">
                            {employee.fullName}          
     </Typography>

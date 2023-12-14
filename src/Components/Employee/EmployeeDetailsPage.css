@@ -1,0 +1,22 @@
+.divider {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+   }
+   .employee-details-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+   .photo-container {
+    border: 1px solid #ccc; /* Thin border around the photo */
+    padding: 5px; /* Padding to create some space around the photo */
+    width: 120px; /* Passport size photo width */
+    height: 150px; /* Passport size photo height */
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+   }
+   .card-media {
+    width: 100%; /* Make sure the image takes up the full width of the container */
+    height: 100%; /* Make sure the image takes up the full height of the container */
+    object-fit: contain; /* Ensure the image fits into the container without cropping */
+   }
