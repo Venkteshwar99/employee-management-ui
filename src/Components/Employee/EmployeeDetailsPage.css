@@ -1,22 +1,59 @@
-.divider {
+/* EmployeeDetailsPage.css */
+.employee-details-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f0f0f0; /* Set a background color if needed */
+    padding-top: 10px;
+   }
+   .employee-details-content {
+    width: 80%; /* Adjust the width as needed */
+    max-width: 600px; /* Set a max-width for better readability */
+    margin: 0 auto;
+   }
+   .divider {
     margin: 10px 0;
     border: 0;
     border-top: 1px solid #ccc;
    }
-   .employee-details-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-   }
-   .photo-container {
-    border: 1px solid #ccc; /* Thin border around the photo */
-    padding: 5px; /* Padding to create some space around the photo */
-    width: 120px; /* Passport size photo width */
-    height: 150px; /* Passport size photo height */
-    overflow: hidden; /* Ensure the image doesn't overflow the container */
+   .photo-section {
+    text-align: center;
    }
    .card-media {
-    width: 100%; /* Make sure the image takes up the full width of the container */
-    height: 100%; /* Make sure the image takes up the full height of the container */
-    object-fit: contain; /* Ensure the image fits into the container without cropping */
+    width: 120px; /* Passport size photo width */
+    height: 150px; /* Passport size photo height */
+    object-fit: cover; /* Maintain aspect ratio without cropping */
+   }
+   .full-name {
+    margin-top: 10px; /* Add margin for spacing */
+   }
+   .details-section {
+    text-align: left;
+    margin-top: 20px; /* Add margin for spacing */
+   }
+   .details-field {
+    margin-bottom: 10px; /* Add margin between each field and value */
+    padding-left: 50px;
+   }
+   .details-field span {
+    display: inline-block;
+    width: 150px; /* Adjust the width as needed for spacing */
+    font-weight: bold;
+    margin-right: 10px; /* Add margin between field and value */
+
+   }
+   .email-link {
+    text-decoration: none;
+    color: inherit;
+   }
+   .email-link:hover {
+    text-decoration: underline;
+   }
+
+   @media only screen and (max-width:600px)
+{
+    .employee-details-content{
+        padding:20px
+    }    
    }

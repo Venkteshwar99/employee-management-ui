@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card, CardContent, Typography, Grid, CardMedia } from '@mui/material';
+import Email from '@mui/icons-material/Email'; // Import the alternate email icon
 import './EmployeeDetailsPage.css'; // Add your CSS file
 const EmployeeDetailsPage = ({ match }) => {
  const [employee, setEmployee] = useState(null);
@@ -15,46 +16,76 @@ const EmployeeDetailsPage = ({ match }) => {
    return <div>Loading...</div>;
  }
  return (
-<Card>
-<CardContent className="employee-details-content">
+<div className="employee-details-page">
+<Card className="employee-details-content">
+<CardContent>
 <Grid container spacing={2}>
-<Grid item xs={12} sm={6} md={6} lg={6} className="photo-container">
+<Grid item xs={12} className="photo-section">
 <CardMedia
-             component="img"
-             alt={employee.empName}
-             className="card-media"
-             image={`http://localhost:8081/api/photo/${employee.empId}`}
-           />
+               component="img"
+               alt={employee.empName}
+               className="card-media"
+               image={`http://localhost:8081/api/photo/${employee.empId}`}
+             />
+<Typography variant="h6" component="div" className="full-name">
+               {employee.fullName}
+</Typography>
 </Grid>
-<Grid item xs={12} sm={6} md={6} lg={6}>
-<Typography variant="h6" component="div">
-            {employee.fullName} 
-</Typography>
+<Grid item xs={12}>
 <hr className="divider" />
+</Grid>
+<Grid item xs={12}>
+<div className="details-section">
+<div className="details-field">
+<Typography color="textSecondary">
+<span>ID:</span> {employee.empId}
+</Typography>
+</div>
 
-<Typography  color="textSecondary">
-         ID:  {employee.empId}
-</Typography>
-<Typography  color="textSecondary">
-         First Name:  {employee.firstName}
-</Typography>
-<Typography  color="textSecondary">
-         Last Name:  {employee.lastName}
-</Typography>
+<div className="details-field">
 <Typography color="textSecondary">
-             Department: {employee.empDept}
+<span>First Name:</span> {employee.firstName}
 </Typography>
+</div>
+
+<div className="details-field">
 <Typography color="textSecondary">
-             Role: {employee.empRole}
+<span>Last Name:</span> {employee.lastName}
 </Typography>
+</div>
+
+
+<div className="details-field">
 <Typography color="textSecondary">
-             Location: {employee.location}
+<span>Email:</span>
+<Email style={{ marginRight: '5px' }} />
+<a href={`mailto:${employee.email}`} className="email-link">
+                     {employee.email}
+</a>
 </Typography>
-           {/* Add more information as needed */}
+</div>
+<div className="details-field">
+<Typography color="textSecondary">
+<span>Department:</span> {employee.empDept}
+</Typography>
+</div>
+<div className="details-field">
+<Typography color="textSecondary">
+<span>Role:</span> {employee.empRole}
+</Typography>
+</div>
+<div className="details-field">
+<Typography color="textSecondary">
+<span>Location:</span> {employee.location}
+</Typography>
+</div>
+               {/* Add more information as needed */}
+</div>
 </Grid>
 </Grid>
 </CardContent>
 </Card>
+</div>
  );
 };
 export default EmployeeDetailsPage;
