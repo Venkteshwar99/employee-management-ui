@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, Typography, Grid, CardMedia, Link } from '@mui/material';
-import '../Employee/EmployeeList.css'; // Import the CSS file
+import '../Employee/Css/EmployeeList.css'; // Import the CSS file
 import axios from 'axios';
-const Employee = () => {
+const EmployeeList = () => {
  const [employees, setEmployees] = useState([]);
  useEffect(() => {
     axios.get('http://localhost:8081/api/findAll')
@@ -55,4 +55,4 @@ const Employee = () => {
     };
     
 
-export default Employee;
+export default EmployeeList;

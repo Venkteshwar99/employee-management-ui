@@ -2,22 +2,12 @@ import './App.css';
 //import Employee from '../src/Components/Employee/Employee.js';
 //import EmployeeDetails from '../src/Components/Employee/EmployeeDetails.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import SearchBar from './Components/Employee/SearchBar.js';
-import Employee from './Components/Employee/Employee.js';
+import SearchBar from './Components/Search/SearchBar.js';
 import EmployeeDetailsPage from './Components/Employee/EmployeeDetailsPage.js';
-import NavBar from './Components/Employee/NavBar.js';
-import SearchResults from './Components/Employee/SearchResults.js';
+import NavBar from './Components/NavBar/NavBar.js';
+import SearchResults from './Components/Search/SearchResults.js';
+import EmployeeList from './Components/Employee/EmployeeList.js';
 
-// function App() {
-//   return (
-//    <div style={{padding:'20px'}}>
-//    <h1>Employee Management System</h1>
-//    <Employee/>
-//    </div>
-//   );
-// }
-
-// export default App;
 const App = () => {
   return (
  <Router>
@@ -27,9 +17,11 @@ const App = () => {
  <Switch>
  <Route exact path="/"  component={SearchBar} />
   <Route path="/api/getActiveEmp/:employeeId" exact component={EmployeeDetailsPage} />
- <Route  path="/employee-list"  exact component={Employee} />
+ <Route  path="/employee-list"  exact component={EmployeeList} />
 
- <Route  path="/search-results"  exact component={SearchResults} />
+ <Route path="/search-results" component={SearchResults} />
+       {/* Add other routes as needed */}
+
         {/* Add other routes as needed */}
  </Switch>
  </div>

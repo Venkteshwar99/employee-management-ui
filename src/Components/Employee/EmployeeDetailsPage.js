@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card, CardContent, Typography, Grid, CardMedia } from '@mui/material';
 import Email from '@mui/icons-material/Email'; // Import the alternate email icon
-import './EmployeeDetailsPage.css'; // Add your CSS file
+import './Css/EmployeeDetailsPage.css'; // Add your CSS file
 const EmployeeDetailsPage = ({ match }) => {
  const [employee, setEmployee] = useState(null);
  const employeeId = match.params.employeeId;
