@@ -1,17 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Card, CardContent, Typography, Grid, CardMedia } from '@mui/material';
+import {Link} from 'react-router-dom';
+import { Card, CardContent, Typography, Grid, CardMedia, Button } from '@mui/material';
 import Email from '@mui/icons-material/Email'; // Import the alternate email icon
 import './Css/EmployeeDetailsPage.css'; // Add your CSS file
+
 const EmployeeDetailsPage = ({ match }) => {
  const [employee, setEmployee] = useState(null);
  const employeeId = match.params.employeeId;
+
  useEffect(() => {
    // Fetch the details for the specific employee
    axios.get(`http://localhost:8081/api/getActiveEmp/${employeeId}`)
      .then(response => setEmployee(response.data))
      .catch(error => console.error('Error fetching employee details:', error));
  }, [employeeId]);
+
+const handleDelete = () => {
+  // Placeholder for delete logic
+  console.log('Delete employee:', employee);
+};
  if (!employee) {
    return <div>Loading...</div>;
  }
@@ -79,7 +87,27 @@ const EmployeeDetailsPage = ({ match }) => {
 <span>Location:</span> {employee.location}
 </Typography>
 </div>
-               {/* Add more information as needed */}
+         
+            <div className="buttons-section">      {/* Update button */}
+<Button
+           variant="contained"
+           color="primary"
+           component={Link}
+           to={{
+             pathname: `/update/${employeeId}`,
+             state: { employee } // Pass employee details as state to the EmployeeUpdate component
+           }}
+>
+           Update
+</Button>
+              
+{/* <Button variant="contained" color="primary" onClick={handleUpdate}>
+                   Update
+</Button> */}
+<Button variant="contained" color="error" onClick={handleDelete}>
+                   Delete
+</Button>
+</div>
 </div>
 </Grid>
 </Grid>

@@ -1,7 +1,7 @@
 .search-bar-container {
     margin: 20px;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 140px;
    }
    .search-bar-wrapper {
     display: inline-block;
@@ -45,6 +45,6 @@
     color:  #3498db;
     padding-bottom: 30px;
     padding-top: 30px;
-    padding-right: 10px;
+    padding-right: 15px;
    }
  

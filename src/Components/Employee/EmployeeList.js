@@ -17,11 +17,11 @@ const EmployeeList = () => {
     <Grid container>
     <Grid item xs={8} sm={8} md={8} lg={8}>
         <CardContent>
-        <Link href={`/api/getActiveEmp/${employee.empId}`}>
+        
     <Typography variant="h6" component="div">
-                           {employee.fullName}          
+           <Link href={`/api/getActiveEmp/${employee.empId}`}>{employee.fullName}</Link>    
     </Typography>
-    </Link>
+  
        <Typography color="textSecondary">
                        Email: {employee.email}
     </Typography>

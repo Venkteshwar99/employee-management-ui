@@ -5,32 +5,43 @@
     align-items: center;
     height: 100vh; /* Full height of the viewport */
     background-color: #f0f0f0; /* Set a background color if needed */
-    padding-top: 10px;
-      }
-   .employee-details-content {
-    width: 80%; /* Adjust the width as needed */
-    max-width: 600px; /* Set a max-width for better readability */
-    margin: 0 auto;
+    padding-top: 2px;
    }
-   .divider {
-    margin: 10px 0;
-    border: 0;
-    border-top: 1px solid #ccc;
+   .employee-details-content {
+    width: 100%;
+    max-width: 600px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    max-height: 680px; /* Adjust the maximum height as needed */
+    overflow: auto; /* Add overflow to enable scrolling if content exceeds the height */
+    padding: 10px; /* Adjust the padding as needed */
+    font-size: 12px; /* Adjust the font size as needed */
    }
    .photo-section {
-    text-align: center;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust the margin as needed */
    }
    .card-media {
-    width: 120px; /* Passport size photo width */
-    height: 150px; /* Passport size photo height */
-    object-fit: cover; /* Maintain aspect ratio without cropping */
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    object-fit: cover;
+    border-radius: 50%; /* Make the image round */
    }
    .full-name {
-    margin-top: 10px; /* Add margin for spacing */
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px; /* Adjust the font size as needed */
+   }
+   .divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 2px 0;
    }
    .details-section {
+    display: flex;
+    flex-direction: column;
     text-align: left;
-    margin-top: 20px; /* Add margin for spacing */
    }
    .details-field {
     margin-bottom: 10px; /* Add margin between each field and value */
@@ -43,17 +54,23 @@
     margin-right: 10px; /* Add margin between field and value */
 
    }
+
    .email-link {
     text-decoration: none;
-    color: inherit;
-   }
+       }
    .email-link:hover {
     text-decoration: underline;
    }
 
-   @media only screen and (max-width:600px)
-{
-    .employee-details-content{
-        padding:20px
-    }    
+   .buttons-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; /* Adjust the margin as needed */
    }
+
+   @media only screen and (max-width:600px)
+   {
+       .employee-details-content{
+           padding:20px
+       }    
+      }
