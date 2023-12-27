@@ -7,6 +7,7 @@ import EmployeeDetailsPage from './Components/Employee/EmployeeDetailsPage.js';
 import NavBar from './Components/NavBar/NavBar.js';
 import SearchResults from './Components/Search/SearchResults.js';
 import EmployeeList from './Components/Employee/EmployeeList.js';
+import UpdateEmployee from './Components/Employee/UpdateEmployee.js';
 
 const App = () => {
   return (
@@ -18,8 +19,8 @@ const App = () => {
  <Route exact path="/"  component={SearchBar} />
   <Route path="/api/getActiveEmp/:employeeId" exact component={EmployeeDetailsPage} />
  <Route  path="/employee-list"  exact component={EmployeeList} />
-
  <Route path="/search-results" component={SearchResults} />
+ <Route path="/update/:employeeId" component={UpdateEmployee} />
        {/* Add other routes as needed */}
 
         {/* Add other routes as needed */}

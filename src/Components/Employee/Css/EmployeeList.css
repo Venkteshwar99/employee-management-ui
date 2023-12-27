@@ -11,8 +11,9 @@
 }
 
 .card-media{
-width: 90%;
+width: 110%;
 height: 100px;
-border-radius: 15px ;
- 
+border-radius: 10px ;
+ padding-left: 50px;
+ object-fit: fill;
 }

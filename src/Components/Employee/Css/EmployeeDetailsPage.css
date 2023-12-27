@@ -31,7 +31,7 @@
    .full-name {
     margin-top: 15px;
     text-align: center;
-    font-size: 18px; /* Adjust the font size as needed */
+    font-size: 16px; /* Adjust the font size as needed */
    }
    .divider {
     border: none;
@@ -67,6 +67,13 @@
     justify-content: space-between;
     margin-top: 10px; /* Adjust the margin as needed */
    }
+
+   .media{
+    width: 90%;
+    height: 100px;
+    border-radius: 15px ;
+     /* padding-left: 200px; */
+    }
 
    @media only screen and (max-width:600px)
    {

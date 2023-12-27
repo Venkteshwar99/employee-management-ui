@@ -12,7 +12,7 @@ const EmployeeList = () => {
  return (
     <Grid container spacing={2}>
          {employees.map((employee, index) => (
-    <Grid item key={employee.employeeId} xs={12} sm={6} md={6} lg={6}>
+    <Grid item key={employee.employeeId} xs={12} sm={4} md={4} lg={4}>
     <Card className="hover-card">
     <Grid container>
     <Grid item xs={8} sm={8} md={8} lg={8}>
@@ -37,7 +37,7 @@ const EmployeeList = () => {
     </Typography> */}
     </CardContent>
     </Grid>
-    <Grid item xs={4} sm={4} md={4} lg={4}>
+    <Grid item xs={4} sm={4} md={4} lg={2}>
     <CardMedia
                      component="img"
                      alt={employee.empName}

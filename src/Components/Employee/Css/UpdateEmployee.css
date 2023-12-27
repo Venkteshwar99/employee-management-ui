@@ -1,0 +1,39 @@
+/* UpdateEmployeeForm.css */
+.update-employee-form {
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    max-width: 500px;
+    margin: 0 auto; 
+    margin-top: 10px;
+    padding: 30px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    max-height: 500px;
+   }
+   .submit-button {
+    margin-top: 10px; 
+   }
+   .success-message {
+    color: #4caf50;
+    margin-top: 10px;
+   }
+
+   .update-employee-form h2{
+        color:  #3498db;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-right: 15px;
+   }
+
+   .image-media{
+    width: 120px;
+    height: 110px;
+    border-radius: 20px;
+     padding-left: 200px;
+     object-fit: fill;
+     cursor: pointer;
+    /* / border: 1px solid #ccc; */
+     align-items: flex-end;
+    }

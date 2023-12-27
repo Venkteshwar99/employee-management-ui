@@ -28,11 +28,11 @@ const handleDelete = () => {
 <Card className="employee-details-content">
 <CardContent>
 <Grid container spacing={2}>
-<Grid item xs={12} className="photo-section">
+<Grid item xs={3}  sm={5} className="photo-section">
 <CardMedia
                component="img"
                alt={employee.empName}
-               className="card-media"
+               className="media"
                image={`http://localhost:8081/api/photo/${employee.empId}`}
              />
 <Typography variant="h6" component="div" className="full-name">
