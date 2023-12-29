@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { TextField, Button, Grid, Snackbar } from '@mui/material';
+import { TextField, Button, Grid, Snackbar,MenuItem,Select,InputLabel,FormControl} from '@mui/material';
 import MuiAlert from '@mui/material/Alert';
 import './Css/UpdateEmployee.css'; // Add your CSS file
 
 const UpdateEmployee = ({ match }) => {
- const [employee, setEmployee] = useState({});
+ const [employee, setEmployee] = useState({active:''});
  const employeeId = match.params.employeeId;
  const [successMessage, setSuccessMessage] = useState('');
  const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -45,15 +45,18 @@ const UpdateEmployee = ({ match }) => {
   return (
 
 <form onSubmit={handleFormSubmit} className="update-employee-form">
-  <h2>Update Employee</h2>  
+
  <Grid container spacing={2}>
- <Grid item  xs={6} sm={7}>
+ <h2>Update Employee</h2>  
+ <Grid item  xs={12} sm={7}>
+  {/* <Card className='employee-photo'> */}
 <img
                component="img"
-               alt={employee.empId}
+               alt={employee.fullName}
                className="image-media"
                src={`http://localhost:8081/api/photo/${employee.empId}`}
              />
+             {/* </Card> */}
              </Grid>
  <Grid item xs={12} sm={6}>
  <TextField
@@ -82,6 +85,7 @@ const UpdateEmployee = ({ match }) => {
             name="email"
             value={employee.email || ''}
             onChange={handleInputChange}
+            required
           />
  </Grid>
 
@@ -92,6 +96,7 @@ const UpdateEmployee = ({ match }) => {
             name="firstName"
             value={employee.firstName || ''}
             onChange={handleInputChange}
+            required
           />
  </Grid>
 
@@ -102,6 +107,7 @@ const UpdateEmployee = ({ match }) => {
             name="lastName"
             value={employee.lastName || ''}
             onChange={handleInputChange}
+            required
           />
  </Grid>
  <Grid item xs={12}  sm={6}>
@@ -111,15 +117,17 @@ const UpdateEmployee = ({ match }) => {
             name="empDept"
             value={employee.empDept || ''}
             onChange={handleInputChange}
-          />
+            required
+                      />
  </Grid>
  <Grid item xs={12}  sm={6}>
  <TextField
             fullWidth
             label="Role"
-            name="Role"
+            name="empRole"
             value={employee.empRole || ''}
             onChange={handleInputChange}
+            required
           />
  </Grid>
  <Grid item xs={12}  sm={6}>
@@ -129,8 +137,35 @@ const UpdateEmployee = ({ match }) => {
             name="location"
             value={employee.location || ''}
             onChange={handleInputChange}
+            required
           />
  </Grid>
+ <Grid item xs={12} sm={6}>
+<FormControl fullWidth>
+<InputLabel id="account-status-label">Account Status</InputLabel>
+<Select
+             labelId="account-status-label"
+             id="account-status"
+             name="active"
+             value={employee.active }
+             onChange={handleInputChange}
+             label="Account Status"
+>
+<MenuItem value={true}>Active</MenuItem>
+<MenuItem value={false}>Inactive</MenuItem>
+</Select>
+</FormControl>
+</Grid>
+ {/* <Grid item xs={12}  sm={6}>
+ <TextField
+            fullWidth
+            label="Account Status"
+            name="active"
+            value={employee.active || ''}
+            onChange={handleInputChange}
+            required
+          />
+ </Grid> */}
  </Grid>
  <Button
         type="submit"
@@ -142,7 +177,7 @@ const UpdateEmployee = ({ match }) => {
  </Button>
  <Snackbar
         open={openSnackbar}
-        autoHideDuration={5000}
+        autoHideDuration={2000}
         onClose={handleCloseSnackbar}
  >
  <MuiAlert

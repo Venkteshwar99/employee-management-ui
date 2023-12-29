@@ -5,10 +5,11 @@ import axios from 'axios';
 const EmployeeList = () => {
  const [employees, setEmployees] = useState([]);
  useEffect(() => {
-    axios.get('http://localhost:8081/api/findAll')
+    axios.get('http://localhost:8081/api/findAllActive')
     .then(response => setEmployees(response.data))
     .catch(error => console.error('Error fetching employees:', error));
  }, []);
+
  return (
     <Grid container spacing={2}>
          {employees.map((employee, index) => (

@@ -4,13 +4,15 @@
     border-radius: 5px; 
     max-width: 500px;
     margin: 0 auto; 
-    margin-top: 10px;
-    padding: 30px; 
+    margin-top: 20px;
+    padding: 20px; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    gap: 10px;
-    max-height: 500px;
+    justify-content: center;
+    gap: 5px;
+    max-height: 540px;
+    height: 100%;
+
    }
    .submit-button {
     margin-top: 10px; 
@@ -20,20 +22,19 @@
     margin-top: 10px;
    }
 
-   .update-employee-form h2{
+  .update-employee-form h2{
+    text-align: center;
         color:  #3498db;
-    padding-bottom: 2px;
-    padding-top: 2px;
-    padding-right: 15px;
+       padding-left: 155px;
+       margin-top: -21px;
+       margin-bottom: -30px;
    }
 
    .image-media{
-    width: 120px;
-    height: 110px;
-    border-radius: 20px;
-     padding-left: 200px;
-     object-fit: fill;
-     cursor: pointer;
-    /* / border: 1px solid #ccc; */
-     align-items: flex-end;
+    padding-left: 190px;
+    cursor: pointer;
+    width: 130px;
+    height: 98px;
+    object-fit: scale-down;
+
     }

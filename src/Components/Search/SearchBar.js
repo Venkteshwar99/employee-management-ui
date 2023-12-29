@@ -39,7 +39,7 @@ const SearchBar = () => {
 
 <input
          type="text"
-         placeholder="Search employee by name"
+         placeholder="Search employee by Id, Name, Department, Location"
          value={searchQuery}
          onChange={(e) => setSearchQuery(e.target.value)}
        />
