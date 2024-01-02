@@ -1,40 +1,38 @@
 /* UpdateEmployeeForm.css */
 .update-employee-form {
-    border: 1px solid #ccc;
-    border-radius: 5px; 
-    max-width: 500px;
-    margin: 0 auto; 
-    margin-top: 20px;
-    padding: 20px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    max-height: 540px;
-    height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  max-height: 540px;
+  height: 100%;
+}
+.submit-button {
+  margin-top: 10px;
+}
+.success-message {
+  color: #4caf50;
+  margin-top: 10px;
+}
 
-   }
-   .submit-button {
-    margin-top: 10px; 
-   }
-   .success-message {
-    color: #4caf50;
-    margin-top: 10px;
-   }
+.update-employee-form h2 {
+  text-align: center;
+  color: #3498db;
+  padding-left: 155px;
+  margin-top: -21px;
+  margin-bottom: -30px;
+}
 
-  .update-employee-form h2{
-    text-align: center;
-        color:  #3498db;
-       padding-left: 155px;
-       margin-top: -21px;
-       margin-bottom: -30px;
-   }
-
-   .image-media{
-    padding-left: 190px;
-    cursor: pointer;
-    width: 130px;
-    height: 98px;
-    object-fit: scale-down;
-
-    }
+.image-media {
+  padding-left: 190px;
+  cursor: pointer;
+  width: 130px;
+  height: 98px;
+  object-fit: scale-down;
+}

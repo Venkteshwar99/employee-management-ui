@@ -3,20 +3,19 @@ custom-table {
   max-width: 50%;
   margin: auto;
   border-collapse: collapse;
-   /* Center the table horizontally */
- }
- .custom-table th,
- .custom-table td {
+  /* Center the table horizontally */
+}
+.custom-table th,
+.custom-table td {
   padding: 8px 20px; /* Add padding to table cells for spacing */
   border: 1px solid #ddd;
- }
- .custom-table tbody tr:hover {
+}
+.custom-table tbody tr:hover {
   background-color: #f5f5f5; /* Change the background color on hover */
   cursor: pointer; /* Change the cursor to indicate interactivity */
- }
+}
 
- h2{
-text-align: center;
-font-family: "Lucida Console", "Courier New", monospace;
-
- }
+h2 {
+  text-align: center;
+  font-family: "Lucida Console", "Courier New", monospace;
+}

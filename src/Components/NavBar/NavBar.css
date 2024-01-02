@@ -1,21 +1,20 @@
 .navbar {
-    background-color: #3498db; /* Set your preferred background color */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 50px; /* Set the desired height */
-    position: sticky;
-    top: 0;
-    z-index: 10000;
-   }
-   .nav-link {
-    color: #fff; /* Set the default text color */
-    text-decoration: none;
-    font-size: 16px; /* Set the font size */
-    transition: color 0.3s; /* Add a smooth transition for color changes */
-   }
-   .nav-link:hover {
-    color: #2c3e50; /* Change the color on hover */
-    text-decoration: underline;
-   }
- 
+  background-color: #3498db; /* Set your preferred background color */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px; /* Set the desired height */
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+.nav-link {
+  color: #fff; /* Set the default text color */
+  text-decoration: none;
+  font-size: 16px; /* Set the font size */
+  transition: color 0.3s; /* Add a smooth transition for color changes */
+}
+.nav-link:hover {
+  color: #2c3e50; /* Change the color on hover */
+  text-decoration: underline;
+}

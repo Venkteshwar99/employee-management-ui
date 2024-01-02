@@ -1,0 +1,25 @@
+.create-employee-form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 540px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    max-height: 540px;
+    height: 100%;
+  }
+  .create-button {
+    margin-top: 10px;
+   /* text-align: center; */
+  }
+.create-employee-form h2 {
+    text-align: center;
+    color: #3498db;
+    padding-left: 155px;
+    margin-top: -21px;
+    margin-bottom: -30px;
+  }
