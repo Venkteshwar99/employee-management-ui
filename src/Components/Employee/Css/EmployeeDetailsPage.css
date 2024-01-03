@@ -1,90 +1,88 @@
 /* EmployeeDetailsPage.css */
 .employee-details-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 99%; /* Full height of the viewport */
-    background-color: #f0f0f0; /* Set a background color if needed */
-    padding-top: 10px;
-    padding-bottom: 10px;
-   }
-   .employee-details-content {
-    width: 100%;
-    max-width: 550px; /* Adjust the maximum width as needed */
-    margin: 0 auto;
-    max-height: 600px; /* Adjust the maximum height as needed */
-    overflow: auto; /* Add overflow to enable scrolling if content exceeds the height */
-    padding: 10px; /* Adjust the padding as needed */
-    font-size: 12px; /* Adjust the font size as needed */
-   }
-    .full-name {
-    margin-top: 15px;
-    text-align: center;
-    padding-right: 50px;
-    font-size: 16px; /* Adjust the font size as needed */
-   }
-   .divider {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 2px 0;
-   }
-   .details-section {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-   }
-   .details-field {
-    margin-bottom: 10px; /* Add margin between each field and value */
-    padding-left: 50px;
-   }
-   .details-field span {
-    display: inline-block;
-    width: 150px; /* Adjust the width as needed for spacing */
-    font-weight: bold;
-    margin-right: 10px; /* Add margin between field and value */
-
-   }
-
-   .email-link {
-    text-decoration: none;
-       }
-   .email-link:hover {
-    text-decoration: underline;
-   }
-
-   .buttons-section {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px; /* Adjust the margin as needed */
-   }
-
-
-.photo-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* text-align: right; */
-}   
-   .media{
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    border-radius: 15px ;
-    padding-left: 210px;
-    }
-
-.head h2{
-    text-align: center;
-    color:  #3498db;
-    padding-bottom: 0px;
-    padding-top: 7px;
-    background-color: white;
-    height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 99%; /* Full height of the viewport */
+  background-color: #f0f0f0; /* Set a background color if needed */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.employee-details-content {
+  width: 100%;
+  max-width: 576px; /* Adjust the maximum width as needed */
+  margin: 0 auto;
+  max-height: 600px; /* Adjust the maximum height as needed */
+  overflow: auto; /* Add overflow to enable scrolling if content exceeds the height */
+  padding: 10px; /* Adjust the padding as needed */
+  font-size: 12px; /* Adjust the font size as needed */
+}
+.full-name {
+  margin-top: 15px;
+  text-align: center;
+  padding-right: 15px;
+  font-size: 16px; /* Adjust the font size as needed */
+}
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2px 0;
+}
+.details-section {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.details-field {
+  margin-bottom: 10px; /* Add margin between each field and value */
+  padding-left: 50px;
+}
+.details-field span {
+  display: inline-block;
+  width: 150px; /* Adjust the width as needed for spacing */
+  font-weight: bold;
+  margin-right: 10px; /* Add margin between field and value */
 }
 
-   @media only screen and (max-width:600px)
-   {
-       .employee-details-content{
-           padding:20px
-       }    
-      }
+.email-link {
+  text-decoration: none;
+}
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.buttons-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: right; */
+}
+.media {
+  width: 110px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+  padding-left: 210px;
+  align-items: center;
+}
+
+.head h2 {
+  text-align: center;
+  color: #3498db;
+  padding-bottom: 0px;
+  padding-top: 7px;
+  background-color: white;
+  height: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  .employee-details-content {
+    padding: 20px;
+  }
+}
