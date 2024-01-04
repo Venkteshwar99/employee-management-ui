@@ -22,7 +22,7 @@ const SearchBar = () => {
       );
       const employees = response.data;
       if (Array.isArray(employees) && employees.length > 0) {
-        history.push("/search-results", { employeeDetails: employees });
+        history.push("/search-results", { employeeDetails: employees});
       } else {
         setAlertMessage("No results found.");
         setShowAlert(true);

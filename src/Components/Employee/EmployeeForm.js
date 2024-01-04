@@ -8,10 +8,17 @@ import {
   MenuItem,
   FormControl,
   InputLabel,
+  Snackbar,
 } from "@mui/material";
 import "./Css/EmployeeForm.css";
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import MuiAlert from "@mui/material/Alert";
 
 const EmployeeForm = () => {
+  const [isCreated, setIsCreated] = useState(false);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -44,10 +51,22 @@ const EmployeeForm = () => {
       .post(`http://localhost:8081/api/add`, formData)
       .then((response) => {
         console.log("Employee Created successfully:", response.data);
+        setOpenSnackbar(true);
+        setSuccessMessage("Employee Created successfully");
+        setTimeout(() => {
+          setIsCreated(true);
+        }, 2000);
       })
       .catch((error) => {
         console.error("Error Creating employee:", error);
       });
+  };
+  if (isCreated) {
+    return <Redirect to="/employee-list" />;
+  }
+
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false);
   };
   return (
     <form onSubmit={handleSubmit} className="create-employee-form">
@@ -158,6 +177,20 @@ const EmployeeForm = () => {
       >
         Submit
       </Button>
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={2000}
+        onClose={handleCloseSnackbar}
+      >
+        <MuiAlert
+          elevation={6}
+          variant="filled"
+          onClose={handleCloseSnackbar}
+          severity="success"
+        >
+          {successMessage}
+        </MuiAlert>
+      </Snackbar>
     </form>
   );
 };
