@@ -36,23 +36,24 @@ const SearchResults = () => {
         active: !isActive,
       })
       .then((response) => {
-        console.log('Api Response:',response.data);
+        console.log("API Response:", response.data);
         const updatedEmployeeDetails = employeeDetails.map((employee) =>
-        employee.empId === id
-          ? { ...employee, isActive: response.data.active } // Update isActive based on API response
-          : employee
-      );
-         setEmployeeDetails(updatedEmployeeDetails);
+          employee.empId === id
+            ? {employee, isActive: response.data}
+            : employee
+        );
+        // Update the state with the updated employee details
+        setEmployeeDetails(updatedEmployeeDetails);
         setOpenSnackbar(true);
         setSuccessMessage("Status Updated successfully");
         setTimeout(() => {
           setIsUpdated(true);
         }, 4000);
-             })
-       .catch((error) => {
-     console.error("Error updating status:", error);
-   });
-};
+      })
+      .catch((error) => {
+        console.error("Error updating status:", error);
+      });
+  };
   const handleCloseSnackbar = () => {
     setOpenSnackbar(false);
   };
