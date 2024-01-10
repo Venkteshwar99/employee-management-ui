@@ -24,7 +24,7 @@ const UpdateEmployee = ({ match }) => {
   useEffect(() => {
     // Fetch the details for the specific employee
     axios
-      .get(`http://localhost:8081/api/getActiveEmp/${employeeId}`)
+      .get(`http://localhost:8081/api/emp/getActiveEmp/${employeeId}`)
       .then((response) => setEmployee(response.data))
       .catch((error) =>
         console.error("Error fetching employee details:", error)
@@ -41,7 +41,7 @@ const UpdateEmployee = ({ match }) => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:8081/api/update/${employeeId}`, employee)
+      .put(`http://localhost:8081/api/emp/update/${employeeId}`, employee)
       .then((response) => {
         console.log("Employee updated successfully:", response.data);
         setSuccessMessage("Employee updated successfully");
@@ -60,7 +60,7 @@ const UpdateEmployee = ({ match }) => {
     setOpenSnackbar(false);
   };
   if (isUpdated) {
-    return <Redirect to={`/api/getActiveEmp/${employeeId}`} />;
+    return <Redirect to={`/api/emp/getActiveEmp/${employeeId}`} />;
   }
   return (
     <form onSubmit={handleFormSubmit} className="update-employee-form">
@@ -72,7 +72,7 @@ const UpdateEmployee = ({ match }) => {
             component="img"
             alt={employee.fullName}
             className="image-media"
-            src={`http://localhost:8081/api/photo/${employeeId}`}
+            src={`http://localhost:8081/api/emp/photo/${employeeId}`}
           />
           {/* </Card> */}
         </Grid>

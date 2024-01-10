@@ -16,7 +16,7 @@ const SearchBar = () => {
     }
     try {
       const response = await axios.get(
-        `http://localhost:8081/api/getEmp/name?name=${encodeURIComponent(
+        `http://localhost:8081/api/emp/getEmp/name?name=${encodeURIComponent(
           searchQuery
         )}`
       );

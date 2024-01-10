@@ -13,7 +13,7 @@ const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8081/api/findAllActive")
+      .get("http://localhost:8081/api/emp/findAllActive")
       .then((response) => setEmployees(response.data))
       .catch((error) => console.error("Error fetching employees:", error));
   }, []);
@@ -52,7 +52,7 @@ const EmployeeList = () => {
                   component="img"
                   alt={employee.empName}
                   className="card-media"
-                  image={"http://localhost:8081/api/photo/" + employee.empId} // Add the image URL from the backend
+                  image={"http://localhost:8081/api/emp/photo/" + employee.empId} // Add the image URL from the backend
                 />
               </Grid>
             </Grid>

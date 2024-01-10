@@ -32,7 +32,7 @@ const SearchResults = () => {
   }, [state]);
   const handleStatusUpdate = (id, isActive) => {
     axios
-      .patch(`http://localhost:8081/api/update-status/${id}`, {
+      .patch(`http://localhost:8081/api/emp/update-status/${id}`, {
         active: !isActive,
       })
       .then((response) => {
@@ -83,7 +83,7 @@ const SearchResults = () => {
               {state.employeeDetails.map((employee) => (
                 <TableRow key={employee.empId}>
                   <TableCell>
-                    <Link to={`/api/getActiveEmp/${employee.empId}`}>
+                    <Link to={`/api/emp/getActiveEmp/${employee.empId}`}>
                       {employee.empId}
                     </Link>
                   </TableCell>

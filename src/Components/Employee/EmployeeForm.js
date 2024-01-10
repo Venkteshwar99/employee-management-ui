@@ -48,7 +48,7 @@ const EmployeeForm = () => {
     e.preventDefault();
     console.log(formData);
     axios
-      .post(`http://localhost:8081/api/add`, formData)
+      .post(`http://localhost:8081/api/emp/add`, formData)
       .then((response) => {
         console.log("Employee Created successfully:", response.data);
         setOpenSnackbar(true);

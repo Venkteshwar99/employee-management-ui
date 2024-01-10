@@ -25,7 +25,7 @@ const EmployeeDetailsPage = ({ match }) => {
   useEffect(() => {
     // Fetch the details for the specific employee
     axios
-      .get(`http://localhost:8081/api/getActiveEmp/${employeeId}`)
+      .get(`http://localhost:8081/api/emp/getActiveEmp/${employeeId}`)
       .then((response) => setEmployee(response.data))
       .catch((error) =>
         console.error("Error fetching employee details:", error)
@@ -35,7 +35,7 @@ const EmployeeDetailsPage = ({ match }) => {
   const handleDelete = (e) => {
     e.preventDefault();
     axios
-      .delete(`http://localhost:8081/api/deleteActive/${employeeId}`, employee)
+      .delete(`http://localhost:8081/api/emp/deleteActive/${employeeId}`, employee)
       .then((response) => {
         console.log("Employee deleted successfully:", response.data);
         setOpenSnackbar(true);
@@ -73,7 +73,7 @@ const EmployeeDetailsPage = ({ match }) => {
                   component="img"
                   alt={employee.empName}
                   className="media"
-                  image={`http://localhost:8081/api/photo/${employee.empId}`}
+                  image={`http://localhost:8081/api/emp/photo/${employee.empId}`}
                 />
               </Grid>
               <Grid item xs={12}>
